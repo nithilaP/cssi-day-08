@@ -6,6 +6,11 @@ const getMessages = () => {
     console.log(data);
     for(let key in data){
         console.log(key,data[key]);
+        if (key === passCode.value){
+            console.log("match found");
+            const messages = document.querySelector("#message");
+            message.innerHTML = data[key];
+        }
     }
    })
 }
